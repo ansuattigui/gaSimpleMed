@@ -14,8 +14,8 @@ public class GASimpleMed extends ParticleApplication {
     public void postInit(Scene scene) {
         scene.getStylesheets().add(GASimpleMed.class.getResource("style.css").toExternalForm());
 
-        setTitle("Gluon Desktop Application");
-
+        setTitle("JDocplus Desktop Version");
+        
         getParticle().buildMenu("File -> [exit]", "Help -> [about]");
         
         getParticle().getToolBarActions().addAll(actions("---", "about", "exit"));
