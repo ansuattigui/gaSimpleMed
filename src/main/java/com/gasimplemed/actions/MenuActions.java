@@ -14,18 +14,19 @@ public class MenuActions {
 
     @Inject ParticleApplication app;
 
-    @ActionProxy(text="Exit", accelerator="alt+F4")
-    private void exit() {
+    @ActionProxy(text="Sair", accelerator="alt+F4")
+    private void sair() {
         app.exit();
     }
     
-    @ActionProxy(text="About")
-    private void about() {
+    @ActionProxy(text="Sobre",longText = "Sobre o GASimpleMed")
+    private void sobre() {
         Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Gluon Desktop");
-        alert.setHeaderText("About Gluon Desktop");
+        alert.setTitle("GASimpled Desktop");
+        alert.setHeaderText("Sobre o GASimpleMed");
         alert.setGraphic(new ImageView(new Image(MenuActions.class.getResource("/icon.png").toExternalForm(), 48, 48, true, true)));
-        alert.setContentText("This is a basic Gluon Desktop Application");
+        alert.setContentText("Este é um aplicativo para gerenciamento de agenda de consultas e "
+                + "informações de pacientes");
         alert.showAndWait();
     }
         

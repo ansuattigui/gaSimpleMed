@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gasimplemed.controllers.SimpleOptionsController">
+  <children>
+      <VBox fillWidth="false" layoutX="-18.0" layoutY="-18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Accordion fx:id="menuPrincipal">
+      <panes>
+      <TitledPane fx:id="tpaneAgenda" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Agenda" textAlignment="RIGHT">
+      <content>
+                        <VBox alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" prefHeight="180.0">
+      <children>
+            <Button fx:id="btnAgenda" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#agenda" prefHeight="30.0" prefWidth="120.0" styleClass="botaomd" text="Agenda" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      </children>
+                        </VBox>
+      </content>
+      <font>
+      <Font name="Arial" size="14.0" />
+      </font>
+      </TitledPane>
+                  <TitledPane alignment="CENTER_RIGHT" contentDisplay="CENTER" expanded="false" layoutX="13.0" layoutY="13.0" text="Configurações">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <content>
+                        <AnchorPane prefHeight="180.0" />
+                     </content>
+                  </TitledPane>
+                  <TitledPane alignment="CENTER_RIGHT" contentDisplay="CENTER" expanded="false" text="Convenios" xmlns:fx="http://javafx.com/fxml">
+      <content>
+      <AnchorPane prefHeight="180.0" />
+      </content>
+      <font>
+      <Font name="Tahoma" size="14.0" />
+      </font>
+      </TitledPane>
+                  <TitledPane alignment="CENTER_RIGHT" contentDisplay="CENTER" expanded="false" text="Relatorios">
+                     <content>
+                        <AnchorPane prefHeight="180.0" />
+                     </content>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane alignment="CENTER_RIGHT" contentDisplay="CENTER" expanded="false" text="Cadastros" xmlns:fx="http://javafx.com/fxml">
+      <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" />
+      </content>
+      <font>
+      <Font name="Tahoma" size="14.0" />
+      </font>
+      </TitledPane>
+      <TitledPane alignment="CENTER_RIGHT" contentDisplay="CENTER" expanded="false" text="Pacientes">
+      <font>
+      <Font name="Tahoma" size="14.0" />
+      </font>
+                     <content>
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="180.0">
+                           <children>
+                              <Button fx:id="btnPacientes" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#pacientes" prefHeight="30.0" prefWidth="120.0" styleClass="botaomd" text="Pacientes" />
+                           </children>
+                        </VBox>
+                     </content>
+      </TitledPane>
+      </panes>
+      <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+      </Accordion>
+         </children>
+      </VBox>
+  </children>
+</AnchorPane>

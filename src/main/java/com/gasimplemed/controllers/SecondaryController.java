@@ -17,8 +17,7 @@ public class SecondaryController {
     @Inject private ViewManager viewManager;
 
     @FXML
-    private Button button;
-    
+    private Button button;    
     @FXML
     private ResourceBundle resources;
     
@@ -40,7 +39,7 @@ public class SecondaryController {
         app.getParticle().getToolBarActions().remove(actionHome);
     }
     
-    @ActionProxy(text = "Back")
+    @ActionProxy(text = "Voltar")
     private void goHome() {
         viewManager.switchView("primary");
     }

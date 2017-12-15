@@ -24,8 +24,7 @@ public class PrimaryController {
     private boolean first = true;
     
     @FXML
-    private Label label;
-    
+    private Label label;    
     @FXML
     private Button button;
     
@@ -36,18 +35,16 @@ public class PrimaryController {
     
     public void initialize() {
         ActionMap.register(this);
-        actionSignin =  ActionMap.action("signin");
-        
-        button.setOnAction(e -> viewManager.switchView("secondary"));
-        
+        actionSignin =  ActionMap.action("entrar");        
+        button.setOnAction(e -> viewManager.switchView("secondary"));        
     }
     
     public void postInit() {
-        if (first) {
+/*        if (first) {
             stateManager.setPersistenceMode(StateManager.PersistenceMode.USER);
             addUser(stateManager.getProperty("UserName").orElse("").toString());
             first = false;
-        }
+        }*/
         app.getParticle().getToolBarActions().add(0, actionSignin);
     }
     
@@ -60,12 +57,12 @@ public class PrimaryController {
         stateManager.setProperty("UserName", userName);
     }
 
-    @ActionProxy(text="Sign In")
-    private void signin() {
+    @ActionProxy(text="Entrar")
+    private void entrar() {
         TextInputDialog input = new TextInputDialog(stateManager.getProperty("UserName").orElse("").toString());
-        input.setTitle("User name");
+        input.setTitle("Usuário");
         input.setHeaderText(null);
-        input.setContentText("Input your name:");
+        input.setContentText("Informe seu nome:");
         input.showAndWait().ifPresent(this::addUser);
     }
     
